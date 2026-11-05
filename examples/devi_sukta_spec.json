@@ -1,0 +1,284 @@
+{
+ "title": "Devi Sukta",
+ "footer": [],
+ "panels_per_page": 2,
+ "panels": [
+  {
+   "subtitle": "Rigveda 10.125 | Vagambhrini Sukta | Spoken by Vak",
+   "prose_html": "<p><b>The Goddess speaks.</b> This hymn is voiced by Vak — Speech — daughter of the seer Ambhrina. Every verse begins with <i>aham</i>, “I”: She carries the Gods, feeds the one who offers, makes seers and sages, draws the bow for Rudra, gives birth to the Father, and reaches beyond Sky and Earth.</p>\n<p>It stands in the tenth mandala of the Rigveda, among the cosmological hymns, and is one of the few Vedic hymns spoken wholly in a goddess's own voice. The Shakta tradition reads it as the earliest scriptural statement of the Goddess as supreme power; it is recited at the close of the Devi Mahatmya.</p>\n<p class=\"h2\">Seer: Vak Ambhrini · Deity: Vak · Metre: Trishtubh (verse 2 is Jagati)</p>",
+   "footer": [
+    "a = u in but; i = sit; u = put. AA = father; EE = see; OO = food; OH = go; AY = say; AI = eye; OW = cow. Capitals mark long vowels: hold them. Sanskrit has no stress.",
+    "ri (as in hri, dhri, pri) = one quick syllable. kh / chh / th / dh / bh = the consonant + a puff of air (th is never English “th”). Final h = a soft breath echoing the vowel before it. gny (for jn) is often gy in North Indian usage.",
+    "Vedic pitch accents are not marked. Sanskrit split into reading units (one pada each); sandhi resolved where a word runs across a unit break.",
+    "Rigveda 10.125, unaccented text. English translation is original to this sheet."
+   ]
+  },
+  {
+   "subtitle": "Rigveda 10.125 | Verse 1",
+   "units": [
+    {
+     "dev": "अहं रुद्रेभिर्वसुभिश्चरामि",
+     "iast": "aham rudrebhir vasubhish charami",
+     "phon": "a-ham rud-RAY-bhir va-su-bhish cha-RAA-mi",
+     "en": "I move with the Rudras and the Vasus,"
+    },
+    {
+     "dev": "अहमादित्यैरुत विश्वदेवैः ।",
+     "iast": "aham adityair uta vishvadevaih |",
+     "phon": "a-ham AA-dit-YAIR u-ta vish-va-DAY-VAIH",
+     "en": "I with the Adityas and all the Gods;"
+    },
+    {
+     "dev": "अहं मित्रावरुणोभा बिभर्मि",
+     "iast": "aham mitravarunobha bibharmi",
+     "phon": "a-ham mit-RAA-va-ru-NOH-BHAA bi-bhar-mi",
+     "en": "I bear both Mitra and Varuna,"
+    },
+    {
+     "dev": "अहमिन्द्राग्नी अहमश्विनोभा ॥",
+     "iast": "aham indragni aham ashvinobha ||",
+     "phon": "a-ham in-DRAAG-NEE a-ham ash-vi-NOH-BHAA",
+     "en": "I bear Indra and Agni, I both Ashvins."
+    }
+   ],
+   "footer": []
+  },
+  {
+   "subtitle": "Rigveda 10.125 | Verse 2",
+   "units": [
+    {
+     "dev": "अहं सोममाहनसं बिभर्मि",
+     "iast": "aham somam ahanasam bibharmi",
+     "phon": "a-ham SOH-mam AA-ha-na-sam bi-bhar-mi",
+     "en": "I bear the swelling Soma,"
+    },
+    {
+     "dev": "अहं त्वष्टारमुत पूषणं भगम् ।",
+     "iast": "aham tvashtaram uta pushanam bhagam |",
+     "phon": "a-ham tvash-TAA-ram u-ta POO-sha-nam bha-gam",
+     "en": "I bear Tvashtar, Pushan and Bhaga;"
+    },
+    {
+     "dev": "अहं दधामि द्रविणं हविष्मते",
+     "iast": "aham dadhami dravinam havishmate",
+     "phon": "a-ham da-DHAA-mi dra-vi-nam ha-vish-ma-TAY",
+     "en": "I bestow wealth on the one who offers,"
+    },
+    {
+     "dev": "सुप्राव्ये यजमानाय सुन्वते ॥",
+     "iast": "supravye yajamanaya sunvate ||",
+     "phon": "su-PRAAV-YAY ya-ja-MAA-NAA-ya sun-va-TAY",
+     "en": "on the devout patron who presses the Soma."
+    }
+   ],
+   "footer": [
+    "a = u in but; i = sit; u = put. AA = father; EE = see; OO = food; OH = go; AY = say; AI = eye; OW = cow. Capitals mark long vowels: hold them. Sanskrit has no stress.",
+    "ri (as in hri, dhri, pri) = one quick syllable. kh / chh / th / dh / bh = the consonant + a puff of air (th is never English “th”). Final h = a soft breath echoing the vowel before it. gny (for jn) is often gy in North Indian usage.",
+    "Vedic pitch accents are not marked. Sanskrit split into reading units (one pada each); sandhi resolved where a word runs across a unit break.",
+    "Rigveda 10.125, unaccented text. English translation is original to this sheet."
+   ]
+  },
+  {
+   "subtitle": "Rigveda 10.125 | Verse 3",
+   "units": [
+    {
+     "dev": "अहं राष्ट्री संगमनी वसूनां",
+     "iast": "aham rashtri sangamani vasunam",
+     "phon": "a-ham RAASH-TREE san-ga-ma-NEE va-SOO-NAAM",
+     "en": "I am the Queen, gatherer of treasures,"
+    },
+    {
+     "dev": "चिकितुषी प्रथमा यज्ञियानाम् ।",
+     "iast": "chikitushi prathama yajniyanam |",
+     "phon": "chi-ki-tu-SHEE pra-tha-MAA yag-nyi-YAA-NAAM",
+     "en": "the knowing one, first among those worthy of worship;"
+    },
+    {
+     "dev": "तां मा देवा व्यदधुः पुरुत्रा",
+     "iast": "tam ma deva vyadadhuh purutra",
+     "phon": "TAAM MAA DAY-VAA vya-da-dhuh pu-rut-RAA",
+     "en": "the Gods set Me in many places,"
+    },
+    {
+     "dev": "भूरिस्थात्रां भूर्यावेशयन्तीम् ॥",
+     "iast": "bhuristhatram bhury aveshayantim ||",
+     "phon": "BHOO-ris-THAAT-RAAM BHOOR-YAA-VAY-sha-yan-TEEM",
+     "en": "abiding in many, entering into many."
+    }
+   ],
+   "footer": []
+  },
+  {
+   "subtitle": "Rigveda 10.125 | Verse 4",
+   "units": [
+    {
+     "dev": "मया सो अन्नमत्ति यो विपश्यति",
+     "iast": "maya so annam atti yo vipashyati",
+     "phon": "ma-YAA SOH an-nam at-ti YOH vi-pash-ya-ti",
+     "en": "Through Me eats whoever eats, whoever sees,"
+    },
+    {
+     "dev": "यः प्राणिति य ईं शृणोत्युक्तम् ।",
+     "iast": "yah praniti ya im shrinoty uktam |",
+     "phon": "yah PRAA-ni-ti ya EEM shri-NOHT-yuk-tam",
+     "en": "whoever breathes, whoever hears what is spoken;"
+    },
+    {
+     "dev": "अमन्तवो मां त उप क्षियन्ति",
+     "iast": "amantavo mam ta upa kshiyanti",
+     "phon": "a-man-ta-VOH MAAM ta u-pa kshi-yan-ti",
+     "en": "not knowing Me, they still dwell in Me."
+    },
+    {
+     "dev": "श्रुधि श्रुत श्रद्धिवं ते वदामि ॥",
+     "iast": "shrudhi shruta shraddhivam te vadami ||",
+     "phon": "shru-dhi shru-ta shrad-dhi-vam TAY va-DAA-mi",
+     "en": "Hear, O' one who hears: what I tell you is worthy of faith."
+    }
+   ],
+   "footer": [
+    "a = u in but; i = sit; u = put. AA = father; EE = see; OO = food; OH = go; AY = say; AI = eye; OW = cow. Capitals mark long vowels: hold them. Sanskrit has no stress.",
+    "ri (as in hri, dhri, pri) = one quick syllable. kh / chh / th / dh / bh = the consonant + a puff of air (th is never English “th”). Final h = a soft breath echoing the vowel before it. gny (for jn) is often gy in North Indian usage.",
+    "Vedic pitch accents are not marked. Sanskrit split into reading units (one pada each); sandhi resolved where a word runs across a unit break.",
+    "Rigveda 10.125, unaccented text. English translation is original to this sheet."
+   ]
+  },
+  {
+   "subtitle": "Rigveda 10.125 | Verse 5",
+   "units": [
+    {
+     "dev": "अहमेव स्वयमिदं वदामि",
+     "iast": "aham eva svayam idam vadami",
+     "phon": "a-ham AY-va sva-yam i-dam va-DAA-mi",
+     "en": "I Myself proclaim this,"
+    },
+    {
+     "dev": "जुष्टं देवेभिरुत मानुषेभिः ।",
+     "iast": "jushtam devebhir uta manushebhih |",
+     "phon": "jush-tam DAY-VAY-bhir u-ta MAA-nu-SHAY-bhih",
+     "en": "welcomed by Gods and by humans;"
+    },
+    {
+     "dev": "यं कामये तंतमुग्रं कृणोमि",
+     "iast": "yam kamaye tam-tam ugram krinomi",
+     "phon": "yam KAA-ma-YAY tam-tam ug-ram kri-NOH-mi",
+     "en": "whomever I love, that one I make mighty,"
+    },
+    {
+     "dev": "तं ब्रह्माणं तमृषिं तं सुमेधाम् ॥",
+     "iast": "tam brahmanam tam rishim tam sumedham ||",
+     "phon": "tam brah-MAA-nam tam ri-shim tam su-MAY-DHAAM",
+     "en": "a Brahman, a seer, a sage."
+    }
+   ],
+   "footer": []
+  },
+  {
+   "subtitle": "Rigveda 10.125 | Verse 6",
+   "units": [
+    {
+     "dev": "अहं रुद्राय धनुरा तनोमि",
+     "iast": "aham rudraya dhanur a tanomi",
+     "phon": "a-ham rud-RAA-ya dha-nur AA ta-NOH-mi",
+     "en": "I stretch the bow for Rudra,"
+    },
+    {
+     "dev": "ब्रह्मद्विषे शरवे हन्तवा उ ।",
+     "iast": "brahmadvishe sharave hantava u |",
+     "phon": "brah-mad-vi-SHAY sha-ra-VAY han-ta-VAA u",
+     "en": "so the arrow strikes the hater of prayer;"
+    },
+    {
+     "dev": "अहं जनाय समदं कृणोमि",
+     "iast": "aham janaya samadam krinomi",
+     "phon": "a-ham ja-NAA-ya sa-ma-dam kri-NOH-mi",
+     "en": "I make battle for the people,"
+    },
+    {
+     "dev": "अहं द्यावापृथिवी आ विवेश ॥",
+     "iast": "aham dyavaprithivi a vivesha ||",
+     "phon": "a-ham DYAA-VAA-pri-thi-VEE AA vi-VAY-sha",
+     "en": "I have entered Sky and Earth."
+    }
+   ],
+   "footer": [
+    "a = u in but; i = sit; u = put. AA = father; EE = see; OO = food; OH = go; AY = say; AI = eye; OW = cow. Capitals mark long vowels: hold them. Sanskrit has no stress.",
+    "ri (as in hri, dhri, pri) = one quick syllable. kh / chh / th / dh / bh = the consonant + a puff of air (th is never English “th”). Final h = a soft breath echoing the vowel before it. gny (for jn) is often gy in North Indian usage.",
+    "Vedic pitch accents are not marked. Sanskrit split into reading units (one pada each); sandhi resolved where a word runs across a unit break.",
+    "Rigveda 10.125, unaccented text. English translation is original to this sheet."
+   ]
+  },
+  {
+   "subtitle": "Rigveda 10.125 | Verse 7",
+   "units": [
+    {
+     "dev": "अहं सुवे पितरमस्य मूर्धन्",
+     "iast": "aham suve pitaram asya murdhan",
+     "phon": "a-ham su-VAY pi-ta-ram as-ya MOOR-dhan",
+     "en": "I give birth to the Father at the summit of this world;"
+    },
+    {
+     "dev": "मम योनिरप्स्वन्तः समुद्रे ।",
+     "iast": "mama yonir apsv antah samudre |",
+     "phon": "ma-ma YOH-nir aps-van-tah sa-mud-RAY",
+     "en": "My womb is within the Waters, in the ocean;"
+    },
+    {
+     "dev": "ततो वि तिष्ठे भुवनानु विश्वा",
+     "iast": "tato vi tishthe bhuvananu vishva",
+     "phon": "ta-TOH vi tish-THAY bhu-va-NAA-nu vish-VAA",
+     "en": "from there I spread through all beings,"
+    },
+    {
+     "dev": "उतामूं द्यां वर्ष्मणोप स्पृशामि ॥",
+     "iast": "utamum dyam varshmanopa sprishami ||",
+     "phon": "u-TAA-MOOM DYAAM varsh-ma-NOH-pa spri-SHAA-mi",
+     "en": "and touch that Sky with My height."
+    }
+   ],
+   "footer": []
+  },
+  {
+   "subtitle": "Rigveda 10.125 | Verse 8",
+   "units": [
+    {
+     "dev": "अहमेव वात इव प्र वामि",
+     "iast": "aham eva vata iva pra vami",
+     "phon": "a-ham AY-va VAA-ta i-va pra VAA-mi",
+     "en": "I Myself blow forth like the Wind,"
+    },
+    {
+     "dev": "आरभमाणा भुवनानि विश्वा ।",
+     "iast": "arabhamana bhuvanani vishva |",
+     "phon": "AA-ra-bha-MAA-NAA bhu-va-NAA-ni vish-VAA",
+     "en": "taking hold of all beings;"
+    },
+    {
+     "dev": "परो दिवा पर एना पृथिव्या",
+     "iast": "paro diva para ena prithivya",
+     "phon": "pa-ROH di-VAA pa-ra AY-NAA pri-thiv-YAA",
+     "en": "beyond the Sky, beyond this Earth,"
+    },
+    {
+     "dev": "एतावती महिना सं बभूव ॥",
+     "iast": "etavati mahina sam babhuva ||",
+     "phon": "AY-TAA-va-TEE ma-hi-NAA sam ba-BHOO-va",
+     "en": "so great have I become by My greatness."
+    }
+   ],
+   "footer": [
+    "a = u in but; i = sit; u = put. AA = father; EE = see; OO = food; OH = go; AY = say; AI = eye; OW = cow. Capitals mark long vowels: hold them. Sanskrit has no stress.",
+    "ri (as in hri, dhri, pri) = one quick syllable. kh / chh / th / dh / bh = the consonant + a puff of air (th is never English “th”). Final h = a soft breath echoing the vowel before it. gny (for jn) is often gy in North Indian usage.",
+    "Vedic pitch accents are not marked. Sanskrit split into reading units (one pada each); sandhi resolved where a word runs across a unit break.",
+    "Rigveda 10.125, unaccented text. English translation is original to this sheet."
+   ]
+  },
+  {
+   "title": "Devi Sukta in English",
+   "subtitle": "Rigveda 10.125 | Translation",
+   "prose_html": "<p style='margin:0 0 7pt;font-size:10.5pt;line-height:1.5'><b>1.</b> I move with the Rudras and the Vasus, I with the Adityas and all the Gods; I bear both Mitra and Varuna, I bear Indra and Agni, I both Ashvins.</p><p style='margin:0 0 7pt;font-size:10.5pt;line-height:1.5'><b>2.</b> I bear the swelling Soma, I bear Tvashtar, Pushan and Bhaga; I bestow wealth on the one who offers, on the devout patron who presses the Soma.</p><p style='margin:0 0 7pt;font-size:10.5pt;line-height:1.5'><b>3.</b> I am the Queen, gatherer of treasures, the knowing one, first among those worthy of worship; the Gods set Me in many places, abiding in many, entering into many.</p><p style='margin:0 0 7pt;font-size:10.5pt;line-height:1.5'><b>4.</b> Through Me eats whoever eats, whoever sees, whoever breathes, whoever hears what is spoken; not knowing Me, they still dwell in Me. Hear, O' one who hears: what I tell you is worthy of faith.</p><p style='margin:0 0 7pt;font-size:10.5pt;line-height:1.5'><b>5.</b> I Myself proclaim this, welcomed by Gods and by humans; whomever I love, that one I make mighty, a Brahman, a seer, a sage.</p><p style='margin:0 0 7pt;font-size:10.5pt;line-height:1.5'><b>6.</b> I stretch the bow for Rudra, so the arrow strikes the hater of prayer; I make battle for the people, I have entered Sky and Earth.</p><p style='margin:0 0 7pt;font-size:10.5pt;line-height:1.5'><b>7.</b> I give birth to the Father at the summit of this world; My womb is within the Waters, in the ocean; from there I spread through all beings, and touch that Sky with My height.</p><p style='margin:0 0 7pt;font-size:10.5pt;line-height:1.5'><b>8.</b> I Myself blow forth like the Wind, taking hold of all beings; beyond the Sky, beyond this Earth, so great have I become by My greatness.</p>",
+   "footer": []
+  }
+ ],
+ "css": ".u{margin-bottom:15pt}.dev{font-size:20pt;line-height:1.4;margin-bottom:2pt}.iast,.phon,.en{font-size:11pt}.sub{margin-bottom:20pt}.prose{font-size:11pt;line-height:1.6}.prose p{margin:0 0 11pt}"
+}
