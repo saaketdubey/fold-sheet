@@ -2,7 +2,7 @@
 """Ritual fold-sheet generator (landscape Letter, panels side by side, dashed fold line, binding gutter).
 
 Usage:  python3 fold_sheet.py spec.json out.pdf
-Fonts:  expects ./fonts/fontsource-noto-sans-5.3.0 and ./fonts/fontsource-noto-sans-devanagari-5.3.0
+Fonts:  expects ./fonts/fontsource-noto-sans-<version> and ./fonts/fontsource-noto-sans-devanagari-<version>
         next to this script (see SKILL.md setup).
 
 Spec (JSON):
@@ -67,14 +67,21 @@ h1 { font-size: 18pt; font-weight: 700; margin: 0 0 3pt; letter-spacing: -0.005e
 .foot p { margin: 0; }
 """
 
-FONT_CSS = ["fontsource-noto-sans-5.3.0/400.css", "fontsource-noto-sans-5.3.0/400-italic.css",
-            "fontsource-noto-sans-5.3.0/700.css",
-            "fontsource-noto-sans-devanagari-5.3.0/400.css", "fontsource-noto-sans-devanagari-5.3.0/500.css"]
+def _font_dir(name):
+    """Find ./fonts/fontsource-<name>-<any version>/ so an npm version bump doesn't break the setup."""
+    prefix = f"fontsource-{name}-"
+    hits = sorted(d for d in F.glob(prefix + "*") if d.is_dir() and d.name[len(prefix):len(prefix)+1].isdigit())
+    if not hits:
+        sys.exit(f"fonts/fontsource-{name}-<version>/ not found next to this script; see README setup")
+    return hits[-1]
+
+FONT_CSS = [_font_dir("noto-sans") / f for f in ("400.css", "400-italic.css", "700.css")] + \
+           [_font_dir("noto-sans-devanagari") / f for f in ("400.css", "500.css")]
 
 def build_html(spec):
     e = html.escape
     n = spec.get("panels_per_page", 2)
-    links = "".join(f'<link rel="stylesheet" href="{(F / p).as_uri()}">' for p in FONT_CSS)
+    links = "".join(f'<link rel="stylesheet" href="{p.as_uri()}">' for p in FONT_CSS)
     panels = []
     for i, p in enumerate(spec["panels"]):
         side = "L" if i % n == 0 else ("R" if i % n == n - 1 else "")
