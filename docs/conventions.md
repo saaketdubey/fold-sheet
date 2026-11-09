@@ -5,13 +5,32 @@ These are the rules every sheet follows. `fold_sheet.py` enforces the layout one
 ## Layout
 
 - Landscape Letter (11 × 8.5 in), two panels per page, separated by a dashed vertical fold line.
-- Sheets are printed single-sided and stapled along the fold, so each panel keeps a **0.75 in binding gutter** on its fold side and ~0.5 in on the outer edge. Nothing sits in the gutter, and it is never shrunk to make content fit.
+- Sheets are stapled along the fold — either printed single-sided and folded one sheet at a time, or printed duplex as a booklet (see *Booklet mode*) — so each panel keeps a **0.75 in binding gutter** on its fold side and ~0.5 in on the outer edge. Nothing sits in the gutter, and it is never shrunk to make content fit.
 - Each panel: bold title → small grey subtitle → content → optional thin rule and footer.
 - Continuation panels repeat the title with the subtitle "…, continued".
 - One work is one PDF, however many pages. Pages are not scarce: prefer adding a page to cramming, and don't leave the last panel blank — rebalance at a natural seam (a verse or section boundary) instead.
 - The pronunciation key prints **once per page**, on the left panel, not on every panel.
 - Sans-serif type (Noto Sans + Noto Sans Devanagari). Devanagari must render with proper conjuncts.
 - Body text around 11 pt. Rebalance panels before shrinking type.
+
+## Booklet mode
+
+A booklet is the same sheet printed duplex, with the whole stack folded once and stapled on the fold. The script handles the page order (*imposition*): set `"imposition": "booklet"` in the spec, write the panels in reading order, and the PDF comes out in sheet order — sheet 1 front is `last | first`, its back is `second | second-last`, and so on inward.
+
+- **Every booklet gets a title panel first and a blank panel last.** The title panel has `"title": ""`, `"subtitle": ""`, `"folio": false` and its own centred `prose_html`; the blank panel is `{"title": "", "subtitle": "", "prose_html": ""}`. Neither carries a footer.
+- **The panel count must be a multiple of 4**, so the content panels number 6, 10, 14 … (total minus title and blank). Rebalance at natural seams to land on it; the script pads with blank panels at the end only as a last resort, and says so with a `NOTE`.
+- **Key placement:** once per *opened spread*, on its left-hand page — every even reading-order page (2, 4, 6 …), i.e. the odd spec indices. This differs from single-sided sheets (even indices). The title and blank panels get no key.
+- **Page numbers (folios):** the reading-order page number, 8 pt grey, at the outer bottom corner of every panel with content. The title panel counts as page 1 but isn't numbered. They make the print file self-checking: read the corners of each sheet as `_ | 1`, `2 | last−1`, … Single-sided sheets can turn them off with a top-level `"folio": false`.
+- **Two outputs per booklet:** a proof and a print file from the same spec.
+
+  ```bash
+  python3 fold_sheet.py spec.json name_proof.pdf --proof   # reading order, for checking content and splits
+  python3 fold_sheet.py spec.json name_print.pdf           # booklet order, for the printer
+  ```
+
+  Check the proof page by page, then confirm the sheet order on the print file from the folios.
+- **Print settings:** duplex, **flip on short edge**, actual size (no scaling). Fold the whole stack once, staple on the fold. Printer drivers name the short/long edge inconsistently — print a one-sheet test first on a new printer; if the backs come out upside down, switch to long edge.
+- Converting an existing single-sided sheet: keep its panel splits where they fit; the key moves to the booklet positions, so recheck every panel. Small spacing trims are fine to clear an overflow; the gutter is not.
 
 ## Sheet type A — Sanskrit unit sheet
 
@@ -56,7 +75,7 @@ For introductions, prayers, translations and other running text.
 2. Verify before building: check the text against an online edition where possible, and note what was and wasn't verified. Never invent citations.
 3. Propose the layout (panel count, what goes where, what is left out) before producing anything.
 4. Build, render, and look at every page: balance, gutter, footer placement, ugly wraps, near-empty panels. The generator must print no `OVERFLOW`.
-5. Deliver one PDF with a short list of what changed and anything still open.
+5. Deliver one PDF — for a booklet, the proof and the print file, with the print settings stated — and a short list of what changed and anything still open.
 
 ## Spec format
 
@@ -65,11 +84,14 @@ For introductions, prayers, translations and other running text.
   "title": "Default title for every panel",
   "footer": [],
   "panels_per_page": 2,
+  "imposition": "none",
+  "folio": true,
   "css": "optional CSS overrides, appended last",
   "panels": [
     {
       "title": "optional override",
       "subtitle": "Source | Verse n",
+      "folio": false,
       "footer": ["key line 1", "key line 2"],
       "units": [
         {"label": "OPTIONAL SOURCE LABEL", "dev": "…", "iast": "…", "phon": "…", "en": "…"}
@@ -80,4 +102,4 @@ For introductions, prayers, translations and other running text.
 }
 ```
 
-Set the top-level `footer` to `[]` and give the key to each left-hand (even-indexed) panel's own `footer` to get the once-per-page key.
+Set the top-level `footer` to `[]` and give the key to each left-hand panel's own `footer` to get the once-per-page key — even-indexed panels for a single-sided sheet, odd-indexed for a booklet. `imposition` is `"none"` (single-sided, the default) or `"booklet"`; `folio` turns page numbers on or off for the sheet, and per panel.
