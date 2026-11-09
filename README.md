@@ -15,6 +15,7 @@ I print short sacred texts for use at a home altar. Every version I tried — wo
 - Prints the pronunciation key once per page, not once per panel.
 - Reports `OVERFLOW` if any panel's content doesn't fit, so nothing silently gets clipped.
 - Also handles plain prose panels (introductions, prayers, translations) in the same layout.
+- Prints as single sheets or as a **booklet**: duplex, the whole stack folded once and stapled on the fold, with the page order (imposition) worked out by the script.
 
 ## Spec in, PDF out
 
@@ -52,6 +53,17 @@ python3 fold_sheet.py examples/devi_sukta_spec.json devi_sukta.pdf
 The script prints nothing on success. If it prints `OVERFLOW (panel index, px)`, that panel has too much content — split it or trim the spacing in the spec's `css` field.
 
 The example spec was generated from a verse table by [`examples/make_spec.py`](examples/make_spec.py), which is the easier way to build a multi-verse sheet.
+
+## Booklets
+
+Add `"imposition": "booklet"` to a spec and the script reorders the panels so that, printed duplex and folded as one stack, the pages read in order. Every booklet starts with a title panel and ends with a blank one, so the panel count lands on a multiple of 4. Two outputs come from the same spec:
+
+```bash
+python3 fold_sheet.py examples/devi_sukta_booklet_spec.json devi_sukta_booklet_proof.pdf --proof   # reading order, to check
+python3 fold_sheet.py examples/devi_sukta_booklet_spec.json devi_sukta_booklet_print.pdf           # sheet order, to print
+```
+
+Print settings: duplex, flip on short edge, actual size. Fold the stack once, staple on the fold. Page numbers sit in the outer corners so the sheet order can be checked by eye. The rules are in [`docs/conventions.md`](docs/conventions.md#booklet-mode); [`examples/devi_sukta_booklet_print.pdf`](examples/devi_sukta_booklet_print.pdf) is the Devi Sukta as a 12-page, three-sheet booklet.
 
 ## Conventions
 
