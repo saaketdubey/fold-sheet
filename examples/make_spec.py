@@ -56,17 +56,29 @@ panels = [{"subtitle": SUB, "prose_html": INTRO, "footer": KEY}]
 for n, verse in enumerate(V, 1):
     p = {"subtitle": f"Rigveda 10.125 | Verse {n}",
          "units": [{"dev": d, "iast": t, "phon": ph, "en": e} for d, t, ph, e in verse]}
-    if n % 2 == 1:          # panel index n is odd => right panel, no key; even index => left panel, key
-        pass
     panels.append(p)
-# key goes on every even-indexed panel (left side)
-for i, p in enumerate(panels):
-    p["footer"] = KEY if i % 2 == 0 else []
-
 eng = "".join(f"<p style='margin:0 0 7pt;font-size:10.5pt;line-height:1.5'><b>{n}.</b> {' '.join(e for _,_,_,e in verse)}</p>" for n, verse in enumerate(V, 1))
-panels.append({"title": "Devi Sukta in English", "subtitle": "Rigveda 10.125 | Translation", "prose_html": eng, "footer": []})
+panels.append({"title": "Devi Sukta in English", "subtitle": "Rigveda 10.125 | Translation", "prose_html": eng})
 
-spec = {"title": TITLE, "footer": [], "panels_per_page": 2, "panels": panels,
-        "css": ".u{margin-bottom:15pt}.dev{font-size:20pt;line-height:1.4;margin-bottom:2pt}.iast,.phon,.en{font-size:11pt}.sub{margin-bottom:20pt}.prose{font-size:11pt;line-height:1.6}.prose p{margin:0 0 11pt}"}
-json.dump(spec, open(__import__("pathlib").Path(__file__).with_name("devi_sukta_spec.json"), "w"), ensure_ascii=False, indent=1)
-print(len(panels), "panels")
+CSS = ".u{margin-bottom:15pt}.dev{font-size:20pt;line-height:1.4;margin-bottom:2pt}.iast,.phon,.en{font-size:11pt}.sub{margin-bottom:20pt}.prose{font-size:11pt;line-height:1.6}.prose p{margin:0 0 11pt}"
+here = __import__("pathlib").Path(__file__).parent
+
+# --- single-sided sheet: key on every even-indexed panel (left side); no page numbers ---
+single = [dict(p) for p in panels]
+for i, p in enumerate(single):
+    p["footer"] = KEY if i % 2 == 0 else []
+spec = {"title": TITLE, "footer": [], "panels_per_page": 2, "folio": False, "panels": single, "css": CSS}
+json.dump(spec, open(here / "devi_sukta_spec.json", "w"), ensure_ascii=False, indent=1)
+print(len(single), "panels (single-sided)")
+
+# --- booklet: title panel + the same 10 panels + blank = 12 panels, 3 duplex sheets ---
+title = {"title": "", "subtitle": "", "folio": False, "prose_html":
+         '<div class="tp"><p class="tt">Devi Sukta</p><p class="ts">Rigveda 10.125</p></div>'}
+blank = {"title": "", "subtitle": "", "prose_html": ""}
+booklet = [title] + [dict(p) for p in panels] + [blank]
+for i, p in enumerate(booklet):          # key on the left page of each opened spread = odd indices
+    p["footer"] = KEY if (i % 2 == 1 and i < len(booklet) - 1) else []
+spec = {"title": TITLE, "footer": [], "panels_per_page": 2, "imposition": "booklet", "panels": booklet,
+        "css": CSS + ".tp{margin-top:2.6in;text-align:center}.tp .tt{font-size:26pt;font-weight:700;margin:0 0 8pt}.tp .ts{font-size:11pt;color:#555;margin:0}"}
+json.dump(spec, open(here / "devi_sukta_booklet_spec.json", "w"), ensure_ascii=False, indent=1)
+print(len(booklet), "panels (booklet)")
